@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 设置照片墙的背景图片 */
+        
+        .pictures {
+            height: 200px;
+            background-image: url('images/bg3.JPG');
+        }
+        
+        .pictures li {
+            display: inline;
+        }
+        
+        .pictures li a {
+            float: left;
+            margin: 0 0 27px 30px;
+            width: auto;
+            text-align: center;
+            color: #333;
+            font-size: 18px;
+            text-decoration: none;
+            /* 给照片墙加一个相框的效果 */
+            background-color: #fff;
+            padding: 10px 10px 15px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+            /* 添加旋转效果 */
+            transform: rotate(-2deg);
+            /* 设置过渡效果 */
+            transition: transform 0.15s linear;
+        }
+        
+        .images {
+            display: block;
+            color: #333;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        /* 利用伪元素选择器设置图片下方的字体 */
+        
+        .pictures li a:after {
+            content: attr(title);
+        }
+        /* 设置每个图片的动画效果 */
+        
+        .pictures li:first-child a {
+            position: relative;
+            top: 15px;
+        }
+        
+        .pictures li:nth-child(2) a {
+            position: relative;
+            top: 10px;
+            transform: none;
+        }
+        
+        .pictures li:nth-child(3) a {
+            position: relative;
+            right: 5px;
+            top: 10px;
+            transform: rotate(-8deg);
+        }
+        
+        .pictures li:nth-child(4) a {
+            position: relative;
+            right: 5px;
+            top: 18px;
+            transform: none;
+        }
+        
+        .pictures li:nth-child(5) a {
+            position: relative;
+            left: -4px;
+            top: 12px;
+        }
+        
+        .pictures li:nth-child(6) a {
+            position: relative;
+            right: 5px;
+            top: 10px;
+            transform: rotate(-8deg);
+        }
+        
+        .pictures li a:hover {
+            position: relative;
+            transform: scale(1.5);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="pictures">
+        <li>
+            <a href="1" title="相识"><img src="images/11.jpg" alt="相识" class="images" /></a>
+        </li>
+        <li>
+            <a href="2" title="凝视"><img src="images/22.jpg" alt="凝视" class="images" /></a>
+        </li>
+        <li>
+            <a href="3" title="甜睡"><img src="images/33.jpg" alt="甜睡" class="images" /></a>
+        </li>
+        <li>
+            <a href="4" title="逗乐"><img src="images/44.jpg" alt="逗乐" class="images" /></a>
+        </li>
+        <li>
+            <a href="5" title="奔跑"><img src="images/55.jpg" alt="奔跑" class="images" /></a>
+        </li>
+        <li>
+            <a href="6" title="漠视"><img src="images/66.jpg" alt="漠视" class="images" /></a>
+        </li>
+    </ul>
+</body>
+
+</html>
